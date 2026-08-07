@@ -48,13 +48,6 @@
     <circle cx="728" cy="48" r="1.3"><animate attributeName="cy" values="48;20;48" dur="11s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- title -->
-  <g opacity=".75" filter="url(#softGlow)">
-    <text x="400" y="20" text-anchor="middle" font-family="Verdana,Segoe UI,sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#e8fdff">DEEP IN THE CODEBASE</text>
-    <circle cx="333" cy="16" r="1.5" fill="#ffcc4d"/>
-    <circle cx="467" cy="16" r="1.5" fill="#60f3ff"/>
-  </g>
-
   <!-- background kelp forest -->
   <g fill="none" stroke-linecap="round" opacity=".65">
     <path stroke="#046b56" stroke-width="2.6"><animate attributeName="d" values="M10 141Q24 100 8 58T18 23;M10 141Q-3 100 20 58T4 23;M10 141Q24 100 8 58T18 23" dur="8s" repeatCount="indefinite"/></path>
@@ -87,7 +80,7 @@
   </g>
 
   <!-- large shark -->
-  <g transform="translate(900 56)">
+  <g transform="translate(-190 56)">
     <g>
       <path d="M0 20Q37 -5 101 4Q132 8 153 22Q127 42 96 44Q39 48 0 28Z" fill="url(#shark)"/>
       <path d="M63 7L80 -18L91 8Z" fill="#7297ac"/>
@@ -97,7 +90,7 @@
       <circle cx="126" cy="18" r="2.7" fill="#061729"/>
       <path d="M125 31Q136 37 146 28" fill="none" stroke="#33556a" stroke-width="1.5"/>
       <path d="M143 26L147 29L143 31" fill="#f6fbff"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-1080 4" dur="18s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;1080 4" dur="18s" repeatCount="indefinite"/>
     </g>
   </g>
 
@@ -113,14 +106,14 @@
   </g>
 
   <!-- blue tang -->
-  <g transform="translate(850 93)">
+  <g transform="translate(-85 93)">
     <g>
       <ellipse cx="24" cy="12" rx="24" ry="12" fill="#15c8e8"/>
       <path d="M4 12L-16 2L-16 22Z" fill="#0b64d8"/>
       <path d="M18 1Q27 11 18 23" fill="none" stroke="#073878" stroke-width="4"/>
       <path d="M29 3Q37 12 29 21" fill="none" stroke="#ffd447" stroke-width="3"/>
       <circle cx="39" cy="9" r="2" fill="#041425"/>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-970 -7" dur="12.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;970 -7" dur="12.5s" repeatCount="indefinite"/>
     </g>
   </g>
 
@@ -161,40 +154,31 @@
 
   <!-- dense foreground reef -->
   <g>
-    <!-- left pink coral -->
     <g transform="translate(18 118)">
       <path d="M0 38Q1 18 8 3Q11 18 17 23Q20 8 26 0Q27 18 23 28Q31 17 39 11Q37 28 43 38Z" fill="#ff6b9d"/>
       <circle cx="8" cy="3" r="3" fill="#ff9fbd"/><circle cx="26" cy="0" r="3" fill="#ff9fbd"/><circle cx="39" cy="11" r="3" fill="#ff9fbd"/>
     </g>
-    <!-- orange coral -->
     <g transform="translate(68 126)">
       <path d="M0 30Q2 14 8 3Q11 15 16 21Q20 10 26 4Q25 21 31 30Z" fill="#ff8a45"/>
       <circle cx="8" cy="3" r="2.4" fill="#ffc05b"/><circle cx="26" cy="4" r="2.4" fill="#ffc05b"/>
     </g>
-    <!-- purple coral mound -->
     <g transform="translate(116 137)" fill="#b777e8"><circle cx="0" cy="9" r="9"/><circle cx="12" cy="6" r="11"/><circle cx="25" cy="10" r="9"/><circle cx="35" cy="6" r="8"/></g>
-    <!-- starfish -->
     <path d="M205 145L209 151L216 149L213 155L218 160L210 158L205 164L204 157L196 158L201 152Z" fill="#ffaf4b"/>
-    <!-- central coral -->
     <g transform="translate(351 119)">
       <path d="M0 38Q2 19 10 3Q12 20 19 25Q24 10 30 0Q31 17 26 29Q37 14 43 9Q42 26 49 38Z" fill="#ff5b63"/>
       <circle cx="10" cy="3" r="3" fill="#ff8a7d"/><circle cx="30" cy="0" r="3" fill="#ff8a7d"/><circle cx="43" cy="9" r="3" fill="#ff8a7d"/>
     </g>
-    <!-- anemone -->
     <g transform="translate(409 144)" fill="none" stroke="#f1d45d" stroke-width="3" stroke-linecap="round">
       <path d="M0 11Q-5 3-1-5M5 11Q3 2 8-6M10 11Q13 1 18-4M15 11Q20 4 23 0"/>
     </g>
-    <!-- blue coral -->
     <g transform="translate(536 123)">
       <path d="M0 34Q0 16 7 4Q10 18 15 23Q18 7 24 0Q25 17 21 27Q28 16 35 10Q33 26 40 34Z" fill="#56d8ff"/>
       <circle cx="7" cy="4" r="2.5" fill="#a9efff"/><circle cx="24" cy="0" r="2.5" fill="#a9efff"/>
     </g>
-    <!-- magenta fan coral -->
     <g transform="translate(655 127)" fill="none" stroke="#ff63b5" stroke-width="2" stroke-linecap="round">
       <path d="M18 30Q15 18 4 7M18 30Q20 14 30 2M18 30Q27 17 41 12M18 30Q10 18 11 0M18 30Q25 20 23 7"/>
       <path d="M5 7L0 1M30 2L35 -4M41 12L48 8M11 0L8 -6M23 7L26 0"/>
     </g>
-    <!-- right coral -->
     <g transform="translate(742 120)">
       <path d="M0 37Q2 19 9 4Q12 20 17 25Q22 10 28 1Q28 20 24 29Q34 15 41 10Q39 27 46 37Z" fill="#ff8f56"/>
       <circle cx="9" cy="4" r="2.7" fill="#ffd06b"/><circle cx="28" cy="1" r="2.7" fill="#ffd06b"/>
