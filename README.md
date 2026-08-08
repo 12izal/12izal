@@ -1,9 +1,3 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/12izal/12izal/main/profile-fun.svg?v=1" width="180" alt="Animated profile clip" />
-</div>
-
-<br/>
-
 ## Network Contribution Map
 
 <div align="center">
