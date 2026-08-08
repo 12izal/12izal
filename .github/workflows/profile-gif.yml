@@ -1,0 +1,55 @@
+name: Generate Profile GIF
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/profile-gif.yml
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure ffmpeg is available
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+
+      - name: Download source video
+        run: |
+          curl -L --fail --retry 3 \
+            "https://github.com/user-attachments/assets/793e80f4-a94e-43c2-a737-0576222fcd12" \
+            -o /tmp/profile-source.mp4
+
+      - name: Generate looping GIF
+        run: |
+          ffmpeg -y -i /tmp/profile-source.mp4 \
+            -vf "fps=8,scale=220:-1:flags=lanczos,palettegen=max_colors=96" \
+            -frames:v 1 /tmp/profile-palette.png
+
+          ffmpeg -y -i /tmp/profile-source.mp4 -i /tmp/profile-palette.png \
+            -lavfi "fps=8,scale=220:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=4" \
+            -loop 0 profile-loop.gif
+
+      - name: Commit GIF to profile repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-loop.gif
+          if git diff --cached --quiet; then
+            echo "GIF unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "Generate looping profile GIF"
+          git push
