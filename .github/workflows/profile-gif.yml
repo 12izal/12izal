@@ -26,6 +26,7 @@ jobs:
             sudo apt-get install -y ffmpeg
           fi
 
+      # Source is the GitHub-hosted MP4 previously uploaded to the profile README.
       - name: Download source video
         run: |
           curl -L --fail --retry 3 \
