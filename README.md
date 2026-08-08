@@ -1,4 +1,8 @@
-https://github.com/user-attachments/assets/793e80f4-a94e-43c2-a737-0576222fcd12
+<div align="center">
+  <img src="https://raw.githubusercontent.com/12izal/12izal/main/profile-loop.gif?v=1" width="240" alt="Profile Loop" />
+</div>
+
+<br/>
 
 ## Network Contribution Map
 
