@@ -20,6 +20,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate SNAKE_TOKEN safely
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.SNAKE_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::SNAKE_TOKEN is empty. Add the token VALUE in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+          status=$(curl -sS -o /tmp/github-user.json -w "%{http_code}" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user)
+
+          if [ "$status" != "200" ]; then
+            echo "::error::SNAKE_TOKEN is not accepted by GitHub (HTTP $status). Update the repository secret with a valid PAT value."
+            exit 1
+          fi
+
+          echo "SNAKE_TOKEN is valid."
+
       - name: Generate premium neon contribution snake
         uses: Platane/snk/svg-only@v3
         with:
