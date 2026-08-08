@@ -1,5 +1,6 @@
 name: Generate Snake Animation
 
+# Retry marker: 2026-08-08
 on:
   schedule:
     - cron: "0 */12 * * *"
