@@ -1,7 +1,3 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/12izal/12izal/main/profile-loop.gif?v=1" width="240" alt="Profile Loop" />
-</div>
-
 <br/>
 
 ## Network Contribution Map
